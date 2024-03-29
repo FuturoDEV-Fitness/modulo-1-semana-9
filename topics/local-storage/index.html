@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+
+    <link rel="stylesheet" href="../../global/styles.css" />
+    <link rel="stylesheet" href="../shared.css" />
+    <script src="./index.js"></script>
+    <script src="../../global/functions.js"></script>
+    <script
+      src="https://kit.fontawesome.com/600c04d571.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <button class="go-back" onclick="goHome()">
+        <i class="fa-solid fa-arrow-left"></i> Voltar para o início
+      </button>
+      <h1>Local Storage</h1>
+      <span
+        >Propriedade do objeto Window que permite acessar os dados armazenados
+        na página web.</span
+      >
+    </header>
+
+    <div id="page-content">
+      <div class="notes">
+        <h2 class="section-title">Anotações</h2>
+
+        <div class="note">
+          <ul>
+            <li>
+              Os dados salvos no localStorage só são apagados manualmente ou
+              pelo usuário
+            </li>
+            <li>
+              O localStorage é muito semelhante ao sessionStorage, porém, o
+              sessionStorage não armazena os dados caso a aba seja fechada ou a
+              sessão da página expire.
+            </li>
+            <li>
+              Para visualizar os dados salvos no localStorage basta acessar as
+              ferramentas de desenvolvedor do navegador (F12), em seguida
+              navegar até a aba Application e por fim acessar a tab do
+              localStorage.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="examples">
+        <h2 class="section-title">Demonstrações práticas</h2>
+
+        <div class="example">
+          <h2 class="title">Salvar um valor no localStorage</h2>
+          <code class="description"> localStorage.setItem(key, value) </code>
+          <p class="description">
+            O botão abaixo salva a key "futuro" com o value "dev".
+          </p>
+          <button onclick="saveData('dev')">Testar</button>
+        </div>
+
+        <div class="example">
+          <h2 class="title">Resgatar um valor no localStorage</h2>
+          <code class="description">localStorage.getItem(key);</code>
+          <p class="description">
+            O botão abaixo resgata o value da key "futuro" e exibe o valor em um
+            alerta.
+          </p>
+          <button onclick="getData()">Testar</button>
+        </div>
+
+        <div class="example">
+          <h2 class="title">Remover um valor no localStorage</h2>
+          <code class="description"> localStorage.removeItem(key); </code>
+          <p class="description">
+            O botão remove a key "futuro" do localStorage.
+          </p>
+          <button onclick="clearData()">Testar</button>
+        </div>
+
+        <div class="example">
+          <h2 class="title">Remover todos os valores no localStorage</h2>
+          <code class="description">localStorage.clear();</code>
+          <p class="description">
+            O botão remove todos os valores existentes no localStorage.
+          </p>
+          <button onclick="clearStorage()">Testar</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

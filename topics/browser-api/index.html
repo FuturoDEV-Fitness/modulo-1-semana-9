@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser API</title>
+
+    <link rel="stylesheet" href="../../global/styles.css" />
+    <link rel="stylesheet" href="../shared.css" />
+    <script src="./index.js"></script>
+    <script src="../../global/functions.js"></script>
+    <script
+      src="https://kit.fontawesome.com/600c04d571.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <button class="go-back" onclick="goHome()">
+        <i class="fa-solid fa-arrow-left"></i> Voltar para o início
+      </button>
+      <h1>Browser API</h1>
+      <span
+        >Um conjunto de recursos do navegador que permitem a integração da
+        aplicação com funções nativas do Browser</span
+      >
+    </header>
+
+    <div id="page-content">
+      <div class="notes">
+        <h2 class="section-title">Anotações</h2>
+
+        <div class="note">
+          <ul>
+            <li>Esse conjunto de recursos também é chamado de web APIs</li>
+          </ul>
+        </div>
+
+        <div class="note">
+          <h2 class="title">Integrações fornecidas</h2>
+          <ul>
+            <li>
+              <b>Fetch:</b> usado para realizar chamadas HTTP para um servidor.
+            </li>
+            <li>
+              <b>Manipulação da estrutura da página:</b> usadas para manipular
+              HTML e CSS pelo Javascript.
+            </li>
+            <li>
+              <b>Armazenamento (Storage):</b> usada para armazenar dados no lado
+              do cliente (client-side).
+            </li>
+            <li>
+              <b>Audio e vídeo:</b> usadas para gerenciar, exibir e criar
+              diferentes tipos de mídia.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="examples">
+        <h2 class="section-title">Demonstrações práticas</h2>
+
+        <div class="example">
+          <h2 class="title">setInterval e clearInterval</h2>
+          <h4 class="caption">Sintaxe setInterval:</h4>
+          <code class="description">setInterval(function, delay);</code>
+
+          <h4 class="caption">Sintaxe clearInterval:</h4>
+          <code class="description">clearInterval(intervalId);</code>
+
+          <p class="description">
+            A propriedade function recebe uma função que será executada a cada
+            contagem dos milissegundos passados para a propriedade delay. Para
+            que o loop gerado pelo <i>setInterval</i> pare é necessário chamar a
+            função clearInterval que recebe como parâmetro o id do intervalo que
+            você deseja que seja interrompido. O id do intervalo pode ser
+            capturado atribuindo o intervalo a uma constante.
+          </p>
+          <p class="description">
+            O primeiro botão abaixo inicia um intervalo com delay de 1 segundo
+            que imprime no console a quantidade de vezes que o intervalo ocorreu
+            até aquele momento e o segundo botão interrompe o intervalo
+            iniciado.
+          </p>
+
+          <div>
+            <button onclick="startInterval()">Iniciar intervalo</button>
+            <button onclick="stopInterval()">Interromper intervalo</button>
+          </div>
+        </div>
+
+        <div class="example">
+          <h2 class="title">setTimeout</h2>
+
+          <code class="description"> setTimeout(function, delay); </code>
+
+          <p class="description">
+            A propriedade function recebe uma função que será executada uma
+            única vez após o fim do tempo em milissegundos determinado na
+            propriedade delay.
+          </p>
+
+          <p class="description">
+            Esse método é muito semelhante a um timer, por isso, esse será o
+            exemplo utilizado. O botão abaixo cria um timeout de 1 segundo que
+            no fim do período exibe um alerta na página: "O tempo terminou".
+          </p>
+
+          <div>
+            <button onclick="startTimer()">
+              <i class="fa-solid fa-clock"></i> Iniciar timer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

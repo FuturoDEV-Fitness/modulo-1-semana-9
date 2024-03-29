@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Promises",
+        "path": "/topics/promises",
+        "date": "18/03/2024"
+    },
+    {
+        "title": "Fetch",
+        "path": "/topics/fetch",
+        "date": "18/03/2024"
+    },
+    {
+        "title": "Browser API",
+        "path": "/topics/browser-api",
+        "date": "18/03/2024"
+    },
+    {
+        "title": "Local Storage",
+        "path": "/topics/local-storage",
+        "date": "18/03/2024"
+    },
+    {
+        "title": "JSON",
+        "path": "/topics/json",
+        "date": "18/03/2024"
+    }
+]

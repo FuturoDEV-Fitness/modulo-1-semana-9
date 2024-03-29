@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch</title>
+
+    <link rel="stylesheet" href="../../global/styles.css" />
+    <link rel="stylesheet" href="../shared.css" />
+    <script src="./index.js"></script>
+    <script src="../../global/functions.js"></script>
+    <script
+      src="https://kit.fontawesome.com/600c04d571.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <button class="go-back" onclick="goHome()">
+        <i class="fa-solid fa-arrow-left"></i> Voltar para o início
+      </button>
+      <h1>Fetch</h1>
+      <span
+        >Recurso disponibilizado pelo navegador para realizar chamadas
+        HTTP</span
+      >
+    </header>
+
+    <div id="page-content">
+      <div class="notes">
+        <h2 class="section-title">Anotações</h2>
+
+        <div class="note">
+          <h2 class="title">Sintaxe</h2>
+          <code class="description">fetch(resource, options);</code>
+
+          <h2 class="title">Parâmetros</h2>
+          <ul>
+            <li>
+              <b>resource</b> (Obrigatório) e representa o endereço em que o
+              fetch irá buscar o recurso desejado.
+            </li>
+            <li>
+              <b>options</b> (Opcional): permite a configuração da requisição
+              por meio de um objeto. É onde podemos escolher o method, headers,
+              body e outras opções para realizar o fetch.
+            </li>
+          </ul>
+        </div>
+
+        <div class="note">
+          <ul>
+            <li>
+              Ao chamar o método ele nos retorna uma Promise que se cumpre assim
+              que a resposta do servidor estiver disponível.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="examples">
+        <h2 class="section-title">Demonstrações práticas</h2>
+
+        <div class="example">
+          <h2 class="title">Buscando dados de uma API</h2>
+          <p class="description">
+            O botão abaixo busca a lista filmes da trilogia Star Wars de uma API
+            gratuita com dados e imprime a resposta da requisição no console
+            assim que receber uma resposta.
+          </p>
+          <button onclick="getStarWarsFilms()">Buscar filmes</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
